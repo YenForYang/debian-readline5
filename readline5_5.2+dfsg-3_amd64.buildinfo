@@ -4,23 +4,23 @@ Binary: libreadline5 libreadline-gplv2-dev libreadline5-dbg
 Architecture: amd64
 Version: 5.2+dfsg-3
 Checksums-Md5:
- d249598587105439bea6e54ef90995de 1218716 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
+ c2397351160661c93b0816560a001557 1217700 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
  288434c73071276ffc7ca6702e87b49a 16960 libreadline5-dbg_5.2+dfsg-3_amd64.deb
  60ddd33f93047f563752dd907733e7f4 7980 libreadline5-dbgsym_5.2+dfsg-3_amd64.deb
  0dba37eb505127c0f8e01aac148a4b99 35220 libreadline5_5.2+dfsg-3_amd64.deb
 Checksums-Sha1:
- a41f1ee2fe975a9dcfcd6d243f35253eae200bf5 1218716 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
+ f1fe96f8b40daecf9619f56d5b18866f4b048af5 1217700 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
  d79f5a54f3a57d15401c2de443deaa486c367397 16960 libreadline5-dbg_5.2+dfsg-3_amd64.deb
  9cde6ffd596a9c4d95a376ae0ac74c4dd4b8558a 7980 libreadline5-dbgsym_5.2+dfsg-3_amd64.deb
  6083c1a9fd61700cd28b4b93c0a5a9183ea71f34 35220 libreadline5_5.2+dfsg-3_amd64.deb
 Checksums-Sha256:
- 66567c8871b57fe71faad72d5b8a2a68764df3f43b8671d76e1fefeebb362d33 1218716 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
+ 4752c646c8952af783f6d862b2ea6a972b900a841aa496459f8e1cd6820b3d63 1217700 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
  b9d3d7ec3073c5e1ec6a115c5d27175ddea45ba4fd842a6dc3da6442b37ce57b 16960 libreadline5-dbg_5.2+dfsg-3_amd64.deb
  7d20f0404ca72a08b753c43826682f6dd147710da2ad22a920594678810fdfcb 7980 libreadline5-dbgsym_5.2+dfsg-3_amd64.deb
  4b38767d0729170b955ff91d3e05d35fded86ffe8cb1aaa893939371239a00f2 35220 libreadline5_5.2+dfsg-3_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sat, 22 Dec 2018 14:31:13 +0100
+Build-Date: Sat, 22 Dec 2018 14:46:47 +0100
 Installed-Build-Depends:
  autoconf (= 2.69-11),
  automake (= 1:1.16.1-4),

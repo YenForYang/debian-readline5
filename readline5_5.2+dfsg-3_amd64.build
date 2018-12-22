@@ -63,7 +63,7 @@ find . -type d | xargs chmod g-s
 rm -f support/config.guess support/config.sub
 dh_clean
 dh_clean: Compatibility levels before 9 are deprecated (level 5 in use)
-FAKEROOTKEY=1683597379 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+FAKEROOTKEY=2066979389 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
  debian/rules build
 test -d debian/patched || install -d debian/patched
 dpatch  apply-all  
@@ -272,15 +272,15 @@ make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/read
 rm -f readline.o
 ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/readline.c
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.17 (CPU)       0.00 (elapsed)
-Back end time                        0.05 (CPU)       0.00 (elapsed)
-Total compilation time               0.22 (CPU)       0.00 (elapsed)
+Front end time                       0.13 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.17 (CPU)       0.00 (elapsed)
 rm -f vi_mode.o
 ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/vi_mode.c
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.15 (CPU)       1.00 (elapsed)
-Back end time                        0.10 (CPU)       0.00 (elapsed)
-Total compilation time               0.26 (CPU)       1.00 (elapsed)
+Front end time                       0.13 (CPU)       1.00 (elapsed)
+Back end time                        0.09 (CPU)       0.00 (elapsed)
+Total compilation time               0.22 (CPU)       1.00 (elapsed)
 rm -f funmap.o
 ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/funmap.c
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
@@ -914,8 +914,8 @@ else \
   mv -f debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new \
     debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h; \
 fi
---- debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h	2018-12-22 14:30:25.583148051 +0100
-+++ debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new	2018-12-22 14:30:26.523134394 +0100
+--- debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h	2018-12-22 14:46:20.741269899 +0100
++++ debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new	2018-12-22 14:46:21.513258683 +0100
 @@ -25,19 +25,7 @@
  
  #include <ctype.h>
@@ -976,18 +976,18 @@ dh_shlibdeps: Compatibility levels before 9 are deprecated (level 5 in use)
 dh_shlibdeps: Compatibility levels before 9 are deprecated (level 5 in use)
 dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
 dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
-dpkg-shlibdeps: warning: debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 contains an unresolvable reference to symbol __must_be_linked_with_icc_or_xild: it's probably a plugin
-dpkg-shlibdeps: warning: symbol __must_be_linked_with_icc_or_xild used by debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 found in none of the libraries
 dpkg-shlibdeps: warning: symbol __must_be_linked_with_icc_or_xild used by debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 found in none of the libraries
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 were not linked against libgcc_s.so.1 (they use none of the library's symbols)
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 were not linked against libpthread.so.0 (they use none of the library's symbols)
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 was not linked against libtinfo.so.6 (it uses none of the library's symbols)
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 were not linked against libdl.so.2 (they use none of the library's symbols)
 dpkg-shlibdeps: warning: debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 contains an unresolvable reference to symbol __must_be_linked_with_icc_or_xild: it's probably a plugin
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 were not linked against libdl.so.2 (they use none of the library's symbols)
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 were not linked against libgcc_s.so.1 (they use none of the library's symbols)
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 were not linked against libpthread.so.0 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 contains an unresolvable reference to symbol __must_be_linked_with_icc_or_xild: it's probably a plugin
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 were not linked against libpthread.so.0 (they use none of the library's symbols)
 dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 was not linked against libtinfo.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 were not linked against libdl.so.2 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: symbol __must_be_linked_with_icc_or_xild used by debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 found in none of the libraries
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 was not linked against libtinfo.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 were not linked against libdl.so.2 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 were not linked against libpthread.so.0 (they use none of the library's symbols)
 dh_installdeb -s
 dh_installdeb: Compatibility levels before 9 are deprecated (level 5 in use)
 dh_installdeb: -s/--same-arch is deprecated; please use -a/--arch instead
@@ -1005,11 +1005,11 @@ dh_builddeb -s
 dh_builddeb: Compatibility levels before 9 are deprecated (level 5 in use)
 dh_builddeb: -s/--same-arch is deprecated; please use -a/--arch instead
 dh_builddeb: This feature will be removed in compat 12.
-dpkg-deb: building package 'libreadline5-dbgsym' in '../libreadline5-dbgsym_5.2+dfsg-3_amd64.deb'.
 dpkg-deb: building package 'libreadline5' in '../libreadline5_5.2+dfsg-3_amd64.deb'.
+dpkg-deb: building package 'libreadline5-dbgsym' in '../libreadline5-dbgsym_5.2+dfsg-3_amd64.deb'.
 dpkg-deb: building package 'libreadline5-dbg' in '../libreadline5-dbg_5.2+dfsg-3_amd64.deb'.
 dpkg-deb: building package 'libreadline-gplv2-dev' in '../libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb'.
-FAKEROOTKEY=1451368697 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+FAKEROOTKEY=858671167 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
  dpkg-genbuildinfo --build=binary
  dpkg-genchanges --build=binary >../readline5_5.2+dfsg-3_amd64.changes
 dpkg-genchanges: info: binary-only upload (no source code included)
@@ -1017,9 +1017,9 @@ dpkg-genchanges: info: binary-only upload (no source code included)
 dpkg-buildpackage: info: binary-only upload (no source included)
 Now running lintian readline5_5.2+dfsg-3_amd64.changes ...
 W: readline5 changes: package-builds-dbg-and-dbgsym-variants libreadline5-{dbg,dbgsym}
-W: libreadline-gplv2-dev: priority-extra-is-replaced-by-priority-optional
 W: libreadline5-dbgsym: debug-file-with-no-debug-symbols usr/lib/debug/.build-id/11/dda40cb664dc9072b73e43fa02f5867e427273.debug
 W: libreadline5-dbgsym: debug-file-with-no-debug-symbols usr/lib/debug/.build-id/97/dd142e9af173f2f88f35d028db0e5312661578.debug
-W: libreadline5-dbg: priority-extra-is-replaced-by-priority-optional
 W: libreadline5: priority-extra-is-replaced-by-priority-optional
+W: libreadline5-dbg: priority-extra-is-replaced-by-priority-optional
+W: libreadline-gplv2-dev: priority-extra-is-replaced-by-priority-optional
 Finished running lintian.

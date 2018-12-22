@@ -7,7 +7,7 @@
 23c54c5d057b8f6dfb6ea8a2803e1322  usr/include/readline/rltypedefs.h
 6125ce9e8d9aad5a97986bd56ae95de6  usr/include/readline/tilde.h
 16c3810a730c47b23d8f7673551381e9  usr/lib/x86_64-linux-gnu/libhistory.a
-e5f6b464fad84cf1214b6c6b644f870b  usr/lib/x86_64-linux-gnu/libreadline.a
+d59286009b0678d6f2d39ddb7f24164c  usr/lib/x86_64-linux-gnu/libreadline.a
 6aefbc6fe4234e340938ea9faf8050a1  usr/share/doc/libreadline5/examples/Makefile
 77acf017488f516bad6fcda46154cd28  usr/share/doc/libreadline5/examples/excallback.c
 4576f906dff3be5f91f6e301eaee5711  usr/share/doc/libreadline5/examples/fileman.c

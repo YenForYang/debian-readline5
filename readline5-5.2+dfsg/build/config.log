@@ -2437,7 +2437,7 @@ configure:1857: $? = 1
 configure:1880: checking for C compiler default output file name
 configure:1883: ccache icc -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.01 (CPU)       0.00 (elapsed)
+Front end time                       0.00 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:1886: $? = 0
@@ -2449,7 +2449,7 @@ configure:1972: result: maybe
 configure:1975: checking for suffix of executables
 configure:1977: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.01 (CPU)       0.00 (elapsed)
+Front end time                       0.00 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:1980: $? = 0
@@ -2508,7 +2508,7 @@ conftest.c(2): error: identifier "choke" is undefined
 
 conftest.c(3): error: expected a ";"
 
-Front end time                       0.00 (CPU)       0.00 (elapsed)
+Front end time                       0.01 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 compilation aborted for conftest.c (code 2)
 configure:2322: $? = 2
@@ -2556,8 +2556,8 @@ configure:2747: test -s conftest.o
 configure:2750: $? = 0
 Front end time                       0.01 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
-Front end time                       0.03 (CPU)       0.00 (elapsed)
-Total compilation time               0.03 (CPU)       0.00 (elapsed)
+Front end time                       0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:2839: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 conftest.c(26): warning #266: function "exit" declared implicitly
@@ -2568,9 +2568,9 @@ conftest.c(27): warning #266: function "exit" declared implicitly
     exit (0);
     ^
 
-Front end time                       0.02 (CPU)       0.00 (elapsed)
+Front end time                       0.01 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:2842: $? = 0
 configure:2844: ./conftest
 configure:2847: $? = 0
@@ -2762,7 +2762,7 @@ conftest.c(19): error #2379: cannot open source file "minix/config.h"
   #include <minix/config.h>
                            ^
 
-Front end time                       0.01 (CPU)       0.00 (elapsed)
+Front end time                       0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:3015: $? = 2
 configure: failed program was:
@@ -2792,7 +2792,7 @@ configure:3111: checking whether ccache icc needs -traditional
 Front end time                       0.01 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:3153: result: no
 configure:3173: checking for a BSD-compatible install
 configure:3228: result: /usr/bin/install
@@ -2903,7 +2903,7 @@ configure:4316: checking for fcntl
 configure:4373: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4379: $? = 0
 configure:4383: test -z 
@@ -2916,7 +2916,7 @@ configure:4316: checking for kill
 configure:4373: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4379: $? = 0
 configure:4383: test -z 
@@ -2955,7 +2955,7 @@ configure:4427: checking for putenv
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
@@ -2968,7 +2968,7 @@ configure:4427: checking for select
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
@@ -2981,7 +2981,7 @@ configure:4427: checking for setenv
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
@@ -2994,7 +2994,7 @@ configure:4427: checking for setlocale
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
@@ -3020,7 +3020,7 @@ configure:4427: checking for strpbrk
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
@@ -3033,7 +3033,7 @@ configure:4427: checking for tcgetattr
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
@@ -3046,8 +3046,8 @@ configure:4427: checking for vsnprintf
 configure:4484: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.02 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
+Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:4490: $? = 0
 configure:4494: test -z 
 			 || test ! -s conftest.err
@@ -3072,7 +3072,7 @@ configure:4530: checking for isxdigit
 configure:4587: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4593: $? = 0
 configure:4597: test -z 
@@ -3085,7 +3085,7 @@ configure:4634: checking for getpwent
 configure:4691: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:4697: $? = 0
 configure:4701: test -z 
@@ -3123,9 +3123,9 @@ configure:4722: result: yes
 configure:4733: checking for working strcoll
 configure:4759: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.09 (CPU)       0.00 (elapsed)
+Front end time                       0.07 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.10 (CPU)       0.00 (elapsed)
+Total compilation time               0.08 (CPU)       0.00 (elapsed)
 configure:4762: $? = 0
 configure:4764: ./conftest
 configure:4767: $? = 0
@@ -3169,7 +3169,7 @@ In file included from conftest.c(79):
    ^
 
 Front end time                       0.07 (CPU)       0.00 (elapsed)
-Total compilation time               0.08 (CPU)       0.00 (elapsed)
+Total compilation time               0.07 (CPU)       0.00 (elapsed)
 compilation aborted for conftest.c (code 2)
 configure:4838: $? = 2
 configure: failed program was:
@@ -3265,7 +3265,7 @@ In file included from conftest.c(45):
   #error "Revise your code to use <stdarg.h>."
    ^
 
-Front end time                       0.01 (CPU)       0.00 (elapsed)
+Front end time                       0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:4881: $? = 2
 configure: failed program was:
@@ -3576,7 +3576,7 @@ conftest.c(55): error #2379: cannot open source file "sys/pte.h"
   #include <sys/pte.h>
                       ^
 
-Front end time                       0.01 (CPU)       0.00 (elapsed)
+Front end time                       0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:5034: $? = 2
 configure: failed program was:
@@ -3960,9 +3960,9 @@ conftest.c(93): warning #266: function "exit" declared implicitly
   exit(1);
   ^
 
-Front end time                       0.05 (CPU)       0.00 (elapsed)
+Front end time                       0.04 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.06 (CPU)       0.00 (elapsed)
+Total compilation time               0.05 (CPU)       0.00 (elapsed)
 configure:5520: $? = 0
 configure:5522: ./conftest
 configure:5525: $? = 0
@@ -3970,7 +3970,7 @@ configure:5540: result: present
 configure:5549: checking for lstat
 configure:5573: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.03 (CPU)       0.00 (elapsed)
+Front end time                       0.02 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
 Total compilation time               0.03 (CPU)       0.00 (elapsed)
 configure:5579: $? = 0
@@ -3997,7 +3997,7 @@ conftest.c(93): warning #266: function "exit" declared implicitly
 
 Front end time                       0.03 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.03 (CPU)       0.00 (elapsed)
 configure:5672: $? = 0
 configure:5674: ./conftest
 configure:5677: $? = 1
@@ -4106,9 +4106,9 @@ conftest.c(88): warning #266: function "exit" declared implicitly
   	exit (r1 == 0 || r2 == 0);
   	^
 
-Front end time                       0.03 (CPU)       1.00 (elapsed)
+Front end time                       0.03 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.04 (CPU)       1.00 (elapsed)
+Total compilation time               0.04 (CPU)       0.00 (elapsed)
 configure:5755: $? = 0
 configure:5757: ./conftest
 configure:5760: $? = 1
@@ -4237,8 +4237,8 @@ conftest.c(68): error: identifier "TIOCSTAT" is undefined
   int x = TIOCSTAT;
           ^
 
-Front end time                       0.03 (CPU)       0.00 (elapsed)
-Total compilation time               0.03 (CPU)       0.00 (elapsed)
+Front end time                       0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.02 (CPU)       0.00 (elapsed)
 compilation aborted for conftest.c (code 2)
 configure:5991: $? = 2
 configure: failed program was:
@@ -4454,13 +4454,13 @@ configure:6449: checking for tgetent
 configure:6506: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 ipo: warning #11021: unresolved tgetent
-        Referenced in /tmp/ipo_iccHLbCHD.o
-/usr/bin/x86_64-linux-gnu-ld: /tmp/ipo_iccHLbCHD.o: in function `main':
+        Referenced in /tmp/ipo_iccPcPMGV.o
+/usr/bin/x86_64-linux-gnu-ld: /tmp/ipo_iccPcPMGV.o: in function `main':
 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/conftest.c:107: undefined reference to `tgetent'
-/usr/bin/x86_64-linux-gnu-ld: /tmp/ipo_iccHLbCHD.o:/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/conftest.c:98: undefined reference to `tgetent'
+/usr/bin/x86_64-linux-gnu-ld: /tmp/ipo_iccPcPMGV.o:/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/conftest.c:98: undefined reference to `tgetent'
 configure:6512: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -4578,7 +4578,7 @@ configure:6542: checking for tgetent in -ltermcap
 configure:6572: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c -ltermcap   >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.01 (CPU)       0.00 (elapsed)
 configure:6578: $? = 0
 configure:6582: test -z 
@@ -4656,7 +4656,7 @@ configure:7310: checking for mbsrtowcs
 configure:7367: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:7373: $? = 0
 configure:7377: test -z 
@@ -4669,7 +4669,7 @@ configure:7407: checking for mbrlen
 configure:7464: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:7470: $? = 0
 configure:7474: test -z 
@@ -4707,9 +4707,9 @@ configure:7690: result: yes
 configure:7699: checking for wcsdup
 configure:7756: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
-Front end time                       0.01 (CPU)       1.00 (elapsed)
+Front end time                       0.01 (CPU)       0.00 (elapsed)
 Back end time                        0.01 (CPU)       0.00 (elapsed)
-Total compilation time               0.02 (CPU)       1.00 (elapsed)
+Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:7762: $? = 0
 configure:7766: test -z 
 			 || test ! -s conftest.err
@@ -4760,7 +4760,7 @@ configure:8069: checking for iswlower
 configure:8126: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:8132: $? = 0
 configure:8136: test -z 
@@ -4773,7 +4773,7 @@ configure:8069: checking for iswupper
 configure:8126: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:8132: $? = 0
 configure:8136: test -z 
@@ -4812,7 +4812,7 @@ configure:8069: checking for iswctype
 configure:8126: ccache icc -o conftest -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax conftest.c  >&5
 icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
 Front end time                       0.01 (CPU)       0.00 (elapsed)
-Back end time                        0.01 (CPU)       0.00 (elapsed)
+Back end time                        0.00 (CPU)       0.00 (elapsed)
 Total compilation time               0.02 (CPU)       0.00 (elapsed)
 configure:8132: $? = 0
 configure:8136: test -z 
