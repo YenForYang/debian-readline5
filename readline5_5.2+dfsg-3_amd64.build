@@ -1,0 +1,1025 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package readline5
+dpkg-buildpackage: info: source version 5.2+dfsg-3
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Helmut Grohne <helmut@subdivi.de>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dpatch  deapply-all  
+reverting patch rl-no-non-DFSG-doc from ./ ... ok.
+reverting patch rl-no-rpath from ./ ... ok.
+reverting patch rl-no-cross-check from ./ ... ok.
+reverting patch rl-header from ./ ... ok.
+reverting patch rl-attribute from ./ ... ok.
+reverting patch rl-013 from ./ ... ok.
+reverting patch rl-012 from ./ ... ok.
+reverting patch rl-011 from ./ ... ok.
+reverting patch rl-010 from ./ ... ok.
+reverting patch rl-009 from ./ ... ok.
+reverting patch rl-008 from ./ ... ok.
+reverting patch rl-007 from ./ ... ok.
+reverting patch rl-006 from ./ ... ok.
+reverting patch rl-005 from ./ ... ok.
+reverting patch rl-004 from ./ ... ok.
+rl-004 not applied to ./ .
+reverting patch rl-003 from ./ ... ok.
+reverting patch rl-002 from ./ ... ok.
+reverting patch rl-001 from ./ ... ok.
+rm -rf patch-stamp patch-stampT debian/patched
+dh_testdir
+dh_testroot
+rm -f configure*-stamp build*-stamp install-stamp
+rm -rf autom4te.cache
+rm -rf /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build
+rm -f doc/*.dvi
+rm -f debian/shlibs.local
+/usr/bin/make -f debian/rules unpatch
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg'
+dpatch  deapply-all  
+rl-no-non-DFSG-doc not applied to ./ .
+rl-no-rpath not applied to ./ .
+rl-no-cross-check not applied to ./ .
+rl-header not applied to ./ .
+rl-attribute not applied to ./ .
+rl-013 not applied to ./ .
+rl-012 not applied to ./ .
+rl-011 not applied to ./ .
+rl-010 not applied to ./ .
+rl-009 not applied to ./ .
+rl-008 not applied to ./ .
+rl-007 not applied to ./ .
+rl-006 not applied to ./ .
+rl-005 not applied to ./ .
+rl-004 not applied to ./ .
+rl-004 not applied to ./ .
+rl-003 not applied to ./ .
+rl-002 not applied to ./ .
+rl-001 not applied to ./ .
+rm -rf patch-stamp patch-stampT debian/patched
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg'
+rm -f patch-stamp*
+find . -type d | xargs chmod g-s
+rm -f support/config.guess support/config.sub
+dh_clean
+dh_clean: Compatibility levels before 9 are deprecated (level 5 in use)
+FAKEROOTKEY=1683597379 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+test -d debian/patched || install -d debian/patched
+dpatch  apply-all  
+applying patch rl-001 to ./ ... ok.
+applying patch rl-002 to ./ ... ok.
+applying patch rl-003 to ./ ... ok.
+applying patch rl-004 to ./ ... ok.
+rl-004 already applied to ./ .
+applying patch rl-005 to ./ ... ok.
+applying patch rl-006 to ./ ... ok.
+applying patch rl-007 to ./ ... ok.
+applying patch rl-008 to ./ ... ok.
+applying patch rl-009 to ./ ... ok.
+applying patch rl-010 to ./ ... ok.
+applying patch rl-011 to ./ ... ok.
+applying patch rl-012 to ./ ... ok.
+applying patch rl-013 to ./ ... ok.
+applying patch rl-attribute to ./ ... ok.
+applying patch rl-header to ./ ... ok.
+applying patch rl-no-cross-check to ./ ... ok.
+applying patch rl-no-rpath to ./ ... ok.
+applying patch rl-no-non-DFSG-doc to ./ ... ok.
+dpatch  cat-all  >>patch-stampT
+mv -f patch-stampT patch-stamp
+dh_testdir
+cp -p /usr/share/misc/config.* ./support/
+rm -rf /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build
+mkdir /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build
+find . -type d | xargs chmod g-s
+cd /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build && \
+  /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/configure \
+	--with-curses --prefix=/usr\
+	--host=x86_64-linux-gnu \
+	--libdir=/usr/lib/x86_64-linux-gnu
+configure: WARNING: If you wanted to set the --build type, don't use --host.
+    If a cross compiler is detected then cross compile mode will be used.
+configure: loading site script /usr/share/config.site
+Intel(R) Parallel Studio XE 2019 Update 1 for Linux*
+Copyright (C) 2009-2018 Intel Corporation. All rights reserved.
+checking build system type... 	x86_64-pc-linux-gnu
+checking host system type... 	x86_64-pc-linux-gnu
+
+Beginning configuration for readline-5.2 for x86_64-pc-linux-gnu
+
+checking whether make sets $(MAKE)... 	yes
+checking for x86_64-linux-gnu-gcc... 	ccache icc
+checking for C compiler default output file name... 	a.out
+checking whether the C compiler works... 	yes
+checking whether we are cross compiling... 	maybe
+checking for suffix of executables... 	
+checking for suffix of object files... 	o
+checking whether we are using the GNU C compiler... 	yes
+checking whether ccache icc accepts -g... 	yes
+checking for ccache icc option to accept ANSI C... 	none needed
+checking how to run the C preprocessor... 	ccache icc -E
+checking for egrep... 	grep -E
+checking for ANSI C header files... 	yes
+checking for sys/types.h... 	yes
+checking for sys/stat.h... 	yes
+checking for stdlib.h... 	yes
+checking for string.h... 	yes
+checking for memory.h... 	yes
+checking for strings.h... 	yes
+checking for inttypes.h... 	yes
+checking for stdint.h... 	yes
+checking for unistd.h... 	yes
+checking minix/config.h usability... 	no
+checking minix/config.h presence... 	no
+checking for minix/config.h... 	no
+checking whether ccache icc needs -traditional... 	no
+checking for a BSD-compatible install... 	/usr/bin/install
+checking for ar... 	xiar
+checking for x86_64-linux-gnu-ranlib... 	xiar s
+checking for an ANSI C-conforming const... 	yes
+checking for function prototypes... 	yes
+checking whether char is unsigned... 	no
+checking return type of signal handlers... 	void
+checking for size_t... 	yes
+checking for ssize_t... 	yes
+checking for ANSI C header files... (cached) 	yes
+checking whether stat file-mode macros are broken... 	no
+checking for dirent.h that defines DIR... 	yes
+checking for library containing opendir... 	none required
+checking for fcntl... 	yes
+checking for kill... 	yes
+checking for lstat... 	yes
+checking for memmove... 	yes
+checking for putenv... 	yes
+checking for select... 	yes
+checking for setenv... 	yes
+checking for setlocale... 	yes
+checking for strcasecmp... 	yes
+checking for strpbrk... 	yes
+checking for tcgetattr... 	yes
+checking for vsnprintf... 	yes
+checking for isascii... 	yes
+checking for isxdigit... 	yes
+checking for getpwent... 	yes
+checking for getpwnam... 	yes
+checking for getpwuid... 	yes
+checking for working strcoll... 	yes
+checking fcntl.h usability... 	yes
+checking fcntl.h presence... 	yes
+checking for fcntl.h... 	yes
+checking for unistd.h... (cached) 	yes
+checking for stdlib.h... (cached) 	yes
+checking varargs.h usability... 	no
+checking varargs.h presence... 	no
+checking for varargs.h... 	no
+checking stdarg.h usability... 	yes
+checking stdarg.h presence... 	yes
+checking for stdarg.h... 	yes
+checking for string.h... (cached) 	yes
+checking for strings.h... (cached) 	yes
+checking limits.h usability... 	yes
+checking limits.h presence... 	yes
+checking for limits.h... 	yes
+checking locale.h usability... 	yes
+checking locale.h presence... 	yes
+checking for locale.h... 	yes
+checking pwd.h usability... 	yes
+checking pwd.h presence... 	yes
+checking for pwd.h... 	yes
+checking for memory.h... (cached) 	yes
+checking termcap.h usability... 	yes
+checking termcap.h presence... 	yes
+checking for termcap.h... 	yes
+checking termios.h usability... 	yes
+checking termios.h presence... 	yes
+checking for termios.h... 	yes
+checking termio.h usability... 	yes
+checking termio.h presence... 	yes
+checking for termio.h... 	yes
+checking sys/pte.h usability... 	no
+checking sys/pte.h presence... 	no
+checking for sys/pte.h... 	no
+checking sys/stream.h usability... 	no
+checking sys/stream.h presence... 	no
+checking for sys/stream.h... 	no
+checking sys/select.h usability... 	yes
+checking sys/select.h presence... 	yes
+checking for sys/select.h... 	yes
+checking sys/file.h usability... 	yes
+checking sys/file.h presence... 	yes
+checking for sys/file.h... 	yes
+checking for sys/ptem.h... 	no
+checking for type of signal functions... 	posix
+checking if signal handlers must be reinstalled when invoked... 	no
+checking for presence of POSIX-style sigsetjmp/siglongjmp... 	present
+checking for lstat... 	yes
+checking whether or not strcoll and strcmp differ... 	no
+checking whether the ctype macros accept non-ascii characters... 	no
+checking whether getpw functions are declared in pwd.h... 	yes
+checking whether termios.h defines TIOCGWINSZ... 	no
+checking whether sys/ioctl.h defines TIOCGWINSZ... 	yes
+checking whether signal handlers are of type void... 	yes
+checking for TIOCSTAT in sys/ioctl.h... 	no
+checking for FIONREAD in sys/ioctl.h... 	yes
+checking for speed_t in sys/types.h... 	no
+checking for struct winsize in sys/ioctl.h and termios.h... 	sys/ioctl.h
+checking for struct dirent.d_ino... 	yes
+checking for struct dirent.d_fileno... 	yes
+checking for tgetent... 	no
+checking for tgetent in -ltermcap... 	yes
+checking which library has the termcap functions... 	using libtermcap
+checking wctype.h usability... 	yes
+checking wctype.h presence... 	yes
+checking for wctype.h... 	yes
+checking wchar.h usability... 	yes
+checking wchar.h presence... 	yes
+checking for wchar.h... 	yes
+checking langinfo.h usability... 	yes
+checking langinfo.h presence... 	yes
+checking for langinfo.h... 	yes
+checking for mbsrtowcs... 	yes
+checking for mbrlen... 	yes
+checking for wcrtomb... 	yes
+checking for wcscoll... 	yes
+checking for wcsdup... 	yes
+checking for wcwidth... 	yes
+checking for wctype... 	yes
+checking whether mbrtowc and mbstate_t are properly declared... 	yes
+checking for iswlower... 	yes
+checking for iswupper... 	yes
+checking for towlower... 	yes
+checking for towupper... 	yes
+checking for iswctype... 	yes
+checking for nl_langinfo and CODESET... 	yes
+checking for wchar_t in wchar.h... 	yes
+checking for wctype_t in wctype.h... 	yes
+checking for wint_t in wctype.h... 	yes
+checking configuration for building shared libraries... 	supported
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating examples/Makefile
+config.status: creating shlib/Makefile
+config.status: creating config.h
+config.status: executing default commands
+touch configure-stamp
+dh_testdir
+/usr/bin/make -C /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build \
+    SHOBJ_CFLAGS="-fpic -D_REENTRANT" \
+    SHLIB_LIBS="-ltinfo"
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build'
+rm -f readline.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/readline.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.17 (CPU)       0.00 (elapsed)
+Back end time                        0.05 (CPU)       0.00 (elapsed)
+Total compilation time               0.22 (CPU)       0.00 (elapsed)
+rm -f vi_mode.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/vi_mode.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.15 (CPU)       1.00 (elapsed)
+Back end time                        0.10 (CPU)       0.00 (elapsed)
+Total compilation time               0.26 (CPU)       1.00 (elapsed)
+rm -f funmap.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/funmap.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       0.00 (elapsed)
+rm -f keymaps.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/keymaps.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       0.00 (elapsed)
+rm -f parens.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/parens.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       1.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       1.00 (elapsed)
+rm -f search.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/search.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/search.c(214): warning #268: the format string ends before this argument
+    rl_message ("%s", p, 0);
+                         ^
+
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.17 (CPU)       0.00 (elapsed)
+rm -f rltty.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/rltty.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.11 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.14 (CPU)       0.00 (elapsed)
+rm -f complete.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/complete.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/complete.c(604): warning #266: function "wcwidth" declared implicitly
+  	      w = wcwidth (wc);
+  	          ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/complete.c(672): warning #266: function "wcwidth" declared implicitly
+  	      w = wcwidth (wc);
+  	          ^
+
+Front end time                       0.15 (CPU)       0.00 (elapsed)
+Back end time                        0.08 (CPU)       0.00 (elapsed)
+Total compilation time               0.24 (CPU)       0.00 (elapsed)
+rm -f bind.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/bind.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.16 (CPU)       0.00 (elapsed)
+Back end time                        0.13 (CPU)       0.00 (elapsed)
+Total compilation time               0.29 (CPU)       0.00 (elapsed)
+rm -f isearch.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/isearch.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       1.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.18 (CPU)       1.00 (elapsed)
+rm -f display.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c(726): warning #266: function "wcwidth" declared implicitly
+  	      temp = wcwidth (wc);
+  	             ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c(1261): warning #266: function "wcwidth" declared implicitly
+  	    tempwidth = wcwidth (wc);
+  	                ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c(2528): warning #266: function "wcwidth" declared implicitly
+  	  tmp = wcwidth(wc);
+  	        ^
+
+Front end time                       0.17 (CPU)       0.00 (elapsed)
+Back end time                        0.10 (CPU)       0.00 (elapsed)
+Total compilation time               0.27 (CPU)       0.00 (elapsed)
+rm -f signals.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/signals.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       0.00 (elapsed)
+rm -f util.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/util.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.13 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.17 (CPU)       0.00 (elapsed)
+rm -f kill.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/kill.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.12 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.15 (CPU)       0.00 (elapsed)
+rm -f undo.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/undo.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+rm -f macro.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/macro.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       0.00 (elapsed)
+rm -f input.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/input.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.18 (CPU)       0.00 (elapsed)
+rm -f callback.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/callback.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.08 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.10 (CPU)       0.00 (elapsed)
+rm -f terminal.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/terminal.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.13 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.17 (CPU)       0.00 (elapsed)
+rm -f text.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/text.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.07 (CPU)       0.00 (elapsed)
+Total compilation time               0.21 (CPU)       0.00 (elapsed)
+rm -f nls.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/nls.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       1.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       1.00 (elapsed)
+rm -f misc.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/misc.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.18 (CPU)       0.00 (elapsed)
+rm -f compat.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/compat.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.03 (CPU)       0.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.04 (CPU)       0.00 (elapsed)
+rm -f xmalloc.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/xmalloc.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.05 (CPU)       0.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.06 (CPU)       0.00 (elapsed)
+rm -f history.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/history.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       1.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       1.00 (elapsed)
+rm -f histexpand.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histexpand.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.07 (CPU)       0.00 (elapsed)
+Total compilation time               0.21 (CPU)       0.00 (elapsed)
+rm -f histfile.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histfile.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histfile.c(401): warning #2218: result of call is not used
+        write (file, bp, chars_read - (bp - buffer));
+        ^
+
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+rm -f histsearch.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histsearch.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.08 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.10 (CPU)       0.00 (elapsed)
+rm -f shell.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/shell.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       0.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.10 (CPU)       0.00 (elapsed)
+rm -f mbutil.o
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c(118): warning #266: function "wcwidth" declared implicitly
+  	      if (wcwidth (wc) == 0)
+  	          ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c(131): warning #266: function "wcwidth" declared implicitly
+        while (tmp > 0 && wcwidth (wc) == 0)
+                          ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c(185): warning #266: function "wcwidth" declared implicitly
+  	      if (wcwidth (wc) != 0)
+  	          ^
+
+Front end time                       0.12 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.15 (CPU)       0.00 (elapsed)
+rm -f tilde.o
+ccache icc -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -DREADLINE_LIBRARY -c /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/tilde.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.07 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.09 (CPU)       0.00 (elapsed)
+rm -f libreadline.a
+xiar cr libreadline.a readline.o vi_mode.o funmap.o keymaps.o parens.o search.o rltty.o complete.o bind.o isearch.o display.o signals.o util.o kill.o undo.o macro.o input.o callback.o terminal.o text.o nls.o misc.o compat.o xmalloc.o history.o histexpand.o histfile.o histsearch.o shell.o mbutil.o tilde.o
+xiar: executing 'ar'
+test -n "xiar s" && xiar s libreadline.a
+xiar: executing 'ar'
+rm -f libhistory.a
+xiar cr libhistory.a history.o histexpand.o histfile.o histsearch.o shell.o mbutil.o xmalloc.o
+xiar: executing 'ar'
+test -n "xiar s" && xiar s libhistory.a
+xiar: executing 'ar'
+test -d shlib || mkdir shlib
+( cd shlib ; /usr/bin/make -w all )
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/shlib'
+rm -f readline.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o readline.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/readline.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.16 (CPU)       1.00 (elapsed)
+Back end time                        0.05 (CPU)       0.00 (elapsed)
+Total compilation time               0.21 (CPU)       1.00 (elapsed)
+mv readline.o readline.so
+rm -f vi_mode.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o vi_mode.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/vi_mode.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.17 (CPU)       0.00 (elapsed)
+Back end time                        0.10 (CPU)       0.00 (elapsed)
+Total compilation time               0.28 (CPU)       0.00 (elapsed)
+mv vi_mode.o vi_mode.so
+rm -f funmap.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o funmap.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/funmap.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.10 (CPU)       0.00 (elapsed)
+mv funmap.o funmap.so
+rm -f keymaps.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o keymaps.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/keymaps.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.11 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+mv keymaps.o keymaps.so
+rm -f parens.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o parens.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/parens.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       0.00 (elapsed)
+mv parens.o parens.so
+rm -f search.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o search.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/search.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/search.c(214): warning #268: the format string ends before this argument
+    rl_message ("%s", p, 0);
+                         ^
+
+Front end time                       0.13 (CPU)       1.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.16 (CPU)       1.00 (elapsed)
+mv search.o search.so
+rm -f rltty.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o rltty.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/rltty.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.11 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.14 (CPU)       0.00 (elapsed)
+mv rltty.o rltty.so
+rm -f complete.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o complete.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/complete.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/complete.c(604): warning #266: function "wcwidth" declared implicitly
+  	      w = wcwidth (wc);
+  	          ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/complete.c(672): warning #266: function "wcwidth" declared implicitly
+  	      w = wcwidth (wc);
+  	          ^
+
+Front end time                       0.18 (CPU)       0.00 (elapsed)
+Back end time                        0.10 (CPU)       0.00 (elapsed)
+Total compilation time               0.28 (CPU)       0.00 (elapsed)
+mv complete.o complete.so
+rm -f bind.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o bind.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/bind.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.19 (CPU)       0.00 (elapsed)
+Back end time                        0.14 (CPU)       0.00 (elapsed)
+Total compilation time               0.33 (CPU)       0.00 (elapsed)
+mv bind.o bind.so
+rm -f isearch.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o isearch.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/isearch.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.13 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       1.00 (elapsed)
+Total compilation time               0.17 (CPU)       1.00 (elapsed)
+mv isearch.o isearch.so
+rm -f display.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o display.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c(726): warning #266: function "wcwidth" declared implicitly
+  	      temp = wcwidth (wc);
+  	             ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c(1261): warning #266: function "wcwidth" declared implicitly
+  	    tempwidth = wcwidth (wc);
+  	                ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/display.c(2528): warning #266: function "wcwidth" declared implicitly
+  	  tmp = wcwidth(wc);
+  	        ^
+
+Front end time                       0.17 (CPU)       0.00 (elapsed)
+Back end time                        0.10 (CPU)       0.00 (elapsed)
+Total compilation time               0.28 (CPU)       0.00 (elapsed)
+mv display.o display.so
+rm -f signals.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o signals.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/signals.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.11 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+mv signals.o signals.so
+rm -f util.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o util.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/util.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.17 (CPU)       0.00 (elapsed)
+mv util.o util.so
+rm -f kill.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o kill.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/kill.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.12 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.15 (CPU)       0.00 (elapsed)
+mv kill.o kill.so
+rm -f undo.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o undo.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/undo.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+mv undo.o undo.so
+rm -f macro.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o macro.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/macro.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.11 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+mv macro.o macro.so
+rm -f input.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o input.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/input.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.15 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.18 (CPU)       0.00 (elapsed)
+mv input.o input.so
+rm -f callback.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o callback.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/callback.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.10 (CPU)       0.00 (elapsed)
+mv callback.o callback.so
+rm -f terminal.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o terminal.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/terminal.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.12 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.16 (CPU)       0.00 (elapsed)
+mv terminal.o terminal.so
+rm -f text.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o text.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/text.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.15 (CPU)       0.00 (elapsed)
+Back end time                        0.08 (CPU)       0.00 (elapsed)
+Total compilation time               0.24 (CPU)       0.00 (elapsed)
+mv text.o text.so
+rm -f nls.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o nls.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/nls.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.11 (CPU)       1.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       1.00 (elapsed)
+mv nls.o nls.so
+rm -f misc.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o misc.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/misc.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.15 (CPU)       0.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.18 (CPU)       0.00 (elapsed)
+mv misc.o misc.so
+rm -f xmalloc.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o xmalloc.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/xmalloc.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.06 (CPU)       0.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.07 (CPU)       0.00 (elapsed)
+mv xmalloc.o xmalloc.so
+rm -f history.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o history.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/history.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       1.00 (elapsed)
+Back end time                        0.04 (CPU)       0.00 (elapsed)
+Total compilation time               0.14 (CPU)       1.00 (elapsed)
+mv history.o history.so
+rm -f histexpand.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o histexpand.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histexpand.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.07 (CPU)       0.00 (elapsed)
+Total compilation time               0.21 (CPU)       0.00 (elapsed)
+mv histexpand.o histexpand.so
+rm -f histfile.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o histfile.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histfile.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histfile.c(401): warning #2218: result of call is not used
+        write (file, bp, chars_read - (bp - buffer));
+        ^
+
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.13 (CPU)       0.00 (elapsed)
+mv histfile.o histfile.so
+rm -f histsearch.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o histsearch.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/histsearch.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.09 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.11 (CPU)       0.00 (elapsed)
+mv histsearch.o histsearch.so
+rm -f shell.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o shell.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/shell.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.10 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.12 (CPU)       0.00 (elapsed)
+mv shell.o shell.so
+rm -f mbutil.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o mbutil.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c(118): warning #266: function "wcwidth" declared implicitly
+  	      if (wcwidth (wc) == 0)
+  	          ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c(131): warning #266: function "wcwidth" declared implicitly
+        while (tmp > 0 && wcwidth (wc) == 0)
+                          ^
+
+/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/mbutil.c(185): warning #266: function "wcwidth" declared implicitly
+  	      if (wcwidth (wc) != 0)
+  	          ^
+
+Front end time                       0.14 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.17 (CPU)       0.00 (elapsed)
+mv mbutil.o mbutil.so
+rm -f tilde.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -DREADLINE_LIBRARY -c -o tilde.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/tilde.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.08 (CPU)       0.00 (elapsed)
+Back end time                        0.02 (CPU)       0.00 (elapsed)
+Total compilation time               0.10 (CPU)       0.00 (elapsed)
+mv tilde.o tilde.so
+rm -f compat.so
+ccache icc -c -DHAVE_CONFIG_H   -Wdate-time -D_FORTIFY_SOURCE=2 -I. -I.. -I/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg -DRL_LIBRARY_VERSION='"5.2"' -g -O2 -fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -g -O2 -fpic -D_REENTRANT -o compat.o /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/compat.c 
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg=.'
+Front end time                       0.03 (CPU)       0.00 (elapsed)
+Back end time                        0.01 (CPU)       0.00 (elapsed)
+Total compilation time               0.05 (CPU)       0.00 (elapsed)
+mv compat.o compat.so
+rm -f libreadline.so.5.2
+ccache icc -shared -Wl,-soname,libreadline.so.5.2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -Wl,-soname,`basename libreadline.so.5.2 .2` -o libreadline.so.5.2 readline.so vi_mode.so funmap.so keymaps.so parens.so search.so rltty.so complete.so bind.so isearch.so display.so signals.so util.so kill.so undo.so macro.so input.so callback.so terminal.so text.so nls.so misc.so xmalloc.so history.so histexpand.so histfile.so histsearch.so shell.so mbutil.so tilde.so compat.so -ltinfo
+rm -f libhistory.so.5.2
+ccache icc -shared -Wl,-soname,libhistory.so.5.2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -Wl,-soname,`basename libhistory.so.5.2 .2` -o libhistory.so.5.2 history.so histexpand.so histfile.so histsearch.so shell.so mbutil.so xmalloc.so -ltinfo
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/shlib'
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build'
+/usr/bin/make -C /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/doc info
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/doc'
+make[1]: Nothing to be done for 'info'.
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/doc'
+touch build-stamp
+ fakeroot debian/rules binary
+dh_testdir
+dh_testroot
+dh_clean -k
+dh_clean: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_clean: dh_clean -k is deprecated; use dh_prep instead
+dh_clean: This feature will be removed in compat 12.
+rm -rf debian/tmp
+mkdir -p debian/tmp/usr/bin
+/usr/bin/make -C /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build install \
+    CFLAGS="-g -O2 -D_REENTRANT" \
+    DESTDIR=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp \
+    mandir=/usr/share/man \
+    infodir=/usr/share/info
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build'
+/bin/sh /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/support/mkinstalldirs /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/include \
+	/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/include/readline /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu \
+	/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/man/man3
+mkdir -p -- /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/include /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/include/readline /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/man/man3
+for f in readline.h chardefs.h keymaps.h history.h tilde.h rlstdc.h rlconf.h rltypedefs.h; do \
+	/usr/bin/install -m 644 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/$f /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/include/readline ; \
+done
+( if test -d doc ; then \
+	cd doc && \
+	/usr/bin/make -w infodir=/usr/share/info DESTDIR=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp install; \
+  fi )
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/doc'
+/bin/sh /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/support/mkdirs /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/man/man3
+if test -n "" ; then \
+	/bin/sh /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/support/mkdirs /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp ; \
+fi
+if test -f readline.info; then \
+	/usr/bin/install -m 644 readline.info /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/readline.info; \
+fi
+if test -f rluserman.info; then \
+	/usr/bin/install -m 644 rluserman.info /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/rluserman.info; \
+fi
+if test -f history.info; then \
+	/usr/bin/install -m 644 history.info /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/history.info; \
+fi
+if /bin/sh -c 'install-info --version' >/dev/null 2>&1; then \
+	install-info --dir-file=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/dir \
+		/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/readline.info ; \
+	install-info --dir-file=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/dir \
+		/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/history.info ; \
+	install-info --dir-file=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/dir \
+		/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/rluserman.info ; \
+else true; fi
+install-info: No such file or directory for /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/readline.info
+install-info: No such file or directory for /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/history.info
+install-info: No such file or directory for /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/info/rluserman.info
+make[2]: [Makefile:201: install] Error 1 (ignored)
+/usr/bin/install -m 644 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/doc/readline.3 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/man/man3/readline.3
+/usr/bin/install -m 644 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/doc/history.3 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/share/man/man3/history.3
+if test -n "" ; then \
+	if test -f readline.html; then \
+		/usr/bin/install -m 644 readline.html /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/readline.html; \
+	else \
+		/usr/bin/install -m 644 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/doc/readline.html /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/readline.html; \
+	fi ; \
+	if test -f history.html; then \
+		/usr/bin/install -m 644 history.html /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/history.html; \
+	else \
+		/usr/bin/install -m 644 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/doc/history.html /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/history.html; \
+	fi ; \
+	if test -f rluserman.html; then \
+		/usr/bin/install -m 644 rluserman.html /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/rluserman.html; \
+	else \
+		/usr/bin/install -m 644 /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/doc/rluserman.html /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/rluserman.html; \
+	fi ; \
+fi
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/doc'
+mv /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libreadline.a /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libreadline.old
+mv: cannot stat '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libreadline.a': No such file or directory
+make[1]: [Makefile:223: install-static] Error 1 (ignored)
+/usr/bin/install -m 644 libreadline.a /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libreadline.a
+test -n "xiar s" && xiar s /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libreadline.a
+xiar: executing 'ar'
+mv /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libhistory.a /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libhistory.old
+mv: cannot stat '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libhistory.a': No such file or directory
+make[1]: [Makefile:226: install-static] Error 1 (ignored)
+/usr/bin/install -m 644 libhistory.a /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libhistory.a
+test -n "xiar s" && xiar s /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu/libhistory.a
+xiar: executing 'ar'
+test -d shlib || mkdir shlib
+( cd shlib ; /usr/bin/make -w all )
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/shlib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/shlib'
+( cd shlib ; /usr/bin/make -w DESTDIR=/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp install )
+make[2]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/shlib'
+/bin/sh /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/support/mkdirs /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu
+/bin/sh /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/support/shlib-install -O linux-gnu -d /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu -b /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/bin -i "/usr/bin/install -m 644" libhistory.so.5.2
+/bin/sh /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/support/shlib-install -O linux-gnu -d /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/lib/x86_64-linux-gnu -b /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/debian/tmp/usr/bin -i "/usr/bin/install -m 644" libreadline.so.5.2
+install: you may need to run ldconfig
+make[2]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/shlib'
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build'
+: # move libreadline5
+dh_installdirs -plibreadline5 \
+	etc \
+	lib/x86_64-linux-gnu \
+	usr/share/doc
+dh_installdirs: Compatibility levels before 9 are deprecated (level 5 in use)
+cp -a debian/tmp/usr/lib/x86_64-linux-gnu/lib{history,readline}.so.* debian/libreadline5/lib/x86_64-linux-gnu
+: # move readline-common
+: # move libreadline5-dbg
+dh_installdirs -plibreadline5-dbg \
+	usr/lib/debug \
+	usr/share/doc
+dh_installdirs: Compatibility levels before 9 are deprecated (level 5 in use)
+mv debian/tmp/usr/lib/x86_64-linux-gnu/lib{history,readline}.so.5.2 \
+	debian/libreadline5-dbg/usr/lib/debug/.
+ln -s libhistory.so.5.2 \
+	debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5
+ln -s libreadline.so.5.2 \
+	debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5
+: # move libreadline-gplv2-dev
+dh_installdirs -plibreadline-gplv2-dev \
+	usr/lib/x86_64-linux-gnu \
+	usr/share/doc
+dh_installdirs: Compatibility levels before 9 are deprecated (level 5 in use)
+ln -s /lib/x86_64-linux-gnu/libhistory.so.5 debian/libreadline-gplv2-dev/usr/lib/x86_64-linux-gnu/libhistory.so
+ln -s /lib/x86_64-linux-gnu/libreadline.so.5 debian/libreadline-gplv2-dev/usr/lib/x86_64-linux-gnu/libreadline.so
+mv debian/tmp/usr/lib/x86_64-linux-gnu/lib{history,readline}.a	debian/libreadline-gplv2-dev/usr/lib/x86_64-linux-gnu/.
+mv debian/tmp/usr/include debian/libreadline-gplv2-dev/usr/.
+: # remove HAVE_CONFIG_H from installed headers
+awk '/^#if defined \(HAVE_CONFIG_H\)/, /^#endif/ \
+     {if ($0 == "#else") print "#include <string.h>"; next} {print}' \
+  debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h \
+  > debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new
+if diff -u debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h \
+	debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new; \
+then \
+  rm -f debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new; \
+else \
+  mv -f debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new \
+    debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h; \
+fi
+--- debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h	2018-12-22 14:30:25.583148051 +0100
++++ debian/libreadline-gplv2-dev/usr/include/readline/chardefs.h.new	2018-12-22 14:30:26.523134394 +0100
+@@ -25,19 +25,7 @@
+ 
+ #include <ctype.h>
+ 
+-#if defined (HAVE_CONFIG_H)
+-#  if defined (HAVE_STRING_H)
+-#    if ! defined (STDC_HEADERS) && defined (HAVE_MEMORY_H)
+-#      include <memory.h>
+-#    endif
+-#    include <string.h>
+-#  endif /* HAVE_STRING_H */
+-#  if defined (HAVE_STRINGS_H)
+-#    include <strings.h>
+-#  endif /* HAVE_STRINGS_H */
+-#else
+-#  include <string.h>
+-#endif /* !HAVE_CONFIG_H */
++#include <string.h>
+ 
+ #ifndef whitespace
+ #define whitespace(c) (((c) == ' ') || ((c) == '\t'))
+touch install-stamp
+dh_testdir
+dh_testroot
+dh_installdocs -plibreadline5 \
+	USAGE debian/inputrc.arrows
+dh_installdocs: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_installchangelogs -plibreadline5 CHANGES
+dh_installexamples -plibreadline5 \
+	examples/Inputrc
+dh_installexamples: Compatibility levels before 9 are deprecated (level 5 in use)
+mkdir -p debian/libreadline-gplv2-dev/usr/share/doc/libreadline5/examples
+cp -p /dev/shm/systemd/test/deps/test/lvm2/readline5/readline5-5.2+dfsg/build/examples/Makefile examples/*.c \
+	debian/libreadline-gplv2-dev/usr/share/doc/libreadline5/examples/
+sed -i -e's,srcdir = .*/readline5-5.*/examples,srcdir = /usr/share/doc/libreadline5/examples,' \
+    -e's,VPATH = .:.*/readline5-5.*/examples,VPATH = .:/usr/share/doc/libreadline5/examples,' \
+    -e's,top_srcdir = .*/readline5-5.*,top_srcdir = /usr/include/readline/,' \
+    debian/libreadline-gplv2-dev/usr/share/doc/libreadline5/examples/Makefile
+ln -sf libreadline5 debian/libreadline-gplv2-dev/usr/share/doc/libreadline-gplv2-dev
+ln -sf libreadline5 debian/libreadline5-dbg/usr/share/doc/libreadline5-dbg
+dh_fixperms -plibreadline5 -plibreadline-gplv2-dev -plibreadline5-dbg
+dh_strip -plibreadline5 -plibreadline-gplv2-dev -plibreadline5-dbg
+dh_strip: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_strip: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_strip: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_compress -plibreadline5 -plibreadline-gplv2-dev -plibreadline5-dbg  -X.c
+dh_compress: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_compress: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_compress: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_makeshlibs -plibreadline5 -V 'libreadline5 (>= 5.2)'
+dh_makeshlibs: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_makeshlibs: The provided debian/libreadline5.shlibs file overwrites -V
+cp -p debian/libreadline5.shlibs debian/shlibs.local
+dh_shlibdeps -plibreadline5 -plibreadline-gplv2-dev -plibreadline5-dbg \
+	 -L libreadline5 -l debian/libreadline5/lib
+dh_shlibdeps: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_shlibdeps: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_shlibdeps: Compatibility levels before 9 are deprecated (level 5 in use)
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 contains an unresolvable reference to symbol __must_be_linked_with_icc_or_xild: it's probably a plugin
+dpkg-shlibdeps: warning: symbol __must_be_linked_with_icc_or_xild used by debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 found in none of the libraries
+dpkg-shlibdeps: warning: symbol __must_be_linked_with_icc_or_xild used by debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 found in none of the libraries
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 were not linked against libpthread.so.0 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 was not linked against libtinfo.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5/lib/x86_64-linux-gnu/libreadline.so.5.2 debian/libreadline5/lib/x86_64-linux-gnu/libhistory.so.5.2 were not linked against libdl.so.2 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 contains an unresolvable reference to symbol __must_be_linked_with_icc_or_xild: it's probably a plugin
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 were not linked against libdl.so.2 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libhistory.so.5.2 debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 were not linked against libpthread.so.0 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libreadline5-dbg/usr/lib/debug/libreadline.so.5.2 was not linked against libtinfo.so.6 (it uses none of the library's symbols)
+dh_installdeb -s
+dh_installdeb: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_installdeb: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_installdeb: This feature will be removed in compat 12.
+dh_gencontrol -s 
+dh_gencontrol: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_gencontrol: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_gencontrol: This feature will be removed in compat 12.
+dpkg-gencontrol: warning: Depends field of package libreadline-gplv2-dev: substitution variable ${shlibs:Depends} used, but is not defined
+dh_md5sums -s
+dh_md5sums: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_md5sums: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_md5sums: This feature will be removed in compat 12.
+dh_builddeb -s
+dh_builddeb: Compatibility levels before 9 are deprecated (level 5 in use)
+dh_builddeb: -s/--same-arch is deprecated; please use -a/--arch instead
+dh_builddeb: This feature will be removed in compat 12.
+dpkg-deb: building package 'libreadline5-dbgsym' in '../libreadline5-dbgsym_5.2+dfsg-3_amd64.deb'.
+dpkg-deb: building package 'libreadline5' in '../libreadline5_5.2+dfsg-3_amd64.deb'.
+dpkg-deb: building package 'libreadline5-dbg' in '../libreadline5-dbg_5.2+dfsg-3_amd64.deb'.
+dpkg-deb: building package 'libreadline-gplv2-dev' in '../libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb'.
+FAKEROOTKEY=1451368697 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../readline5_5.2+dfsg-3_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian readline5_5.2+dfsg-3_amd64.changes ...
+W: readline5 changes: package-builds-dbg-and-dbgsym-variants libreadline5-{dbg,dbgsym}
+W: libreadline-gplv2-dev: priority-extra-is-replaced-by-priority-optional
+W: libreadline5-dbgsym: debug-file-with-no-debug-symbols usr/lib/debug/.build-id/11/dda40cb664dc9072b73e43fa02f5867e427273.debug
+W: libreadline5-dbgsym: debug-file-with-no-debug-symbols usr/lib/debug/.build-id/97/dd142e9af173f2f88f35d028db0e5312661578.debug
+W: libreadline5-dbg: priority-extra-is-replaced-by-priority-optional
+W: libreadline5: priority-extra-is-replaced-by-priority-optional
+Finished running lintian.

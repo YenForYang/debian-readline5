@@ -1,0 +1,70 @@
+Patches applied in the Debian version of :
+
+debian/patches/rl-001 (<doko@ubuntu.com>):
+  In some cases, code that is intended to be used in the presence of multibyte 
+  characters is called when no such characters are present, leading to incorrect 
+  display position calculations and incorrect redisplay. 
+
+debian/patches/rl-002 (<doko@ubuntu.com>):
+  In some cases, code that is intended to be used in the presence of multibyte 
+  characters is called when no such characters are present, leading to incorrect 
+  display position calculations and incorrect redisplay. 
+
+debian/patches/rl-003 (<doko@ubuntu.com>):
+  When moving the cursor, bash sometimes misplaces the cursor when the prompt
+  contains two or more multibyte characters.  The particular circumstance that
+  uncovered the problem was having the (multibyte) current directory name in
+  the prompt string.
+
+debian/patches/rl-004 (<doko@ubuntu.com>):
+  When restoring the original prompt after finishing an incremental search,
+  bash sometimes places the cursor incorrectly if the primary prompt contains
+  invisible characters.
+
+debian/patches/rl-004 (<doko@ubuntu.com>):
+  When restoring the original prompt after finishing an incremental search,
+  bash sometimes places the cursor incorrectly if the primary prompt contains
+  invisible characters.
+
+debian/patches/rl-005 (<doko@ubuntu.com>):
+  readline upstream patch readline52-005.
+
+debian/patches/rl-006 (<doko@ubuntu.com>):
+  readline upstream patch readline52-006.
+
+debian/patches/rl-007 (<doko@ubuntu.com>):
+  readline upstream patch readline52-007.
+
+debian/patches/rl-008 (<doko@ubuntu.com>):
+  readline upstream patch readline52-008.
+
+debian/patches/rl-009 (<doko@ubuntu.com>):
+  readline upstream patch readline52-009.
+
+debian/patches/rl-010 (<doko@ubuntu.com>):
+  readline upstream patch readline52-010.
+
+debian/patches/rl-011 (<doko@ubuntu.com>):
+  readline upstream patch readline52-011.
+
+debian/patches/rl-012 (<doko@ubuntu.com>):
+  readline upstream patch readline52-012.
+
+debian/patches/rl-013 (<doko@ubuntu.com>):
+  readline upstream patch readline52-013.
+
+debian/patches/rl-attribute.dpatch (<doko@debian.org>):
+  Do not redefine __attribute__, define macro __rl_attribute__
+
+debian/patches/rl-header.dpatch (<doko@debian.org>):
+  Include stdio.h in readline.h and history.h
+
+debian/patches/rl-no-cross-check.dpatch (<doko@salsa.net.local>):
+  configure: Don't check for cross compilation
+
+debian/patches/rl-no-rpath.dpatch (<doko@salsa.net.local>):
+  Don't set a runtime path for linking the shared libraries
+
+debian/patches/rl-no-non-DFSG-doc.dpatch (David Prévot <taffit@debian.org>):
+  Do not build nor ship non DFSG doc
+

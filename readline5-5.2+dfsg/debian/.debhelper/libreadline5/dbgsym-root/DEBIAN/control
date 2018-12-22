@@ -1,0 +1,13 @@
+Package: libreadline5-dbgsym
+Source: readline5
+Version: 5.2+dfsg-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Installed-Size: 47
+Depends: libreadline5 (= 5.2+dfsg-3)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libreadline5
+Build-Ids: 11dda40cb664dc9072b73e43fa02f5867e427273 97dd142e9af173f2f88f35d028db0e5312661578

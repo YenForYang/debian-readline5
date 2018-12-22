@@ -1,0 +1,7 @@
+patching file complete.c
+patching file input.c
+patching file isearch.c
+patching file misc.c
+patching file readline.c
+patching file text.c
+patching file vi_mode.c

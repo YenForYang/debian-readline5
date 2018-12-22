@@ -1,0 +1,47 @@
+Format: 1.8
+Date: Wed, 27 May 2015 22:15:17 +0200
+Source: readline5
+Binary: libreadline5 libreadline-gplv2-dev libreadline5-dbg
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 5.2+dfsg-3
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Description:
+ libreadline-gplv2-dev - GNU readline and history libraries, development files
+ libreadline5 - GNU readline and history libraries, run-time libraries
+ libreadline5-dbg - GNU readline and history libraries, debugging libraries
+Closes: 784669
+Changes:
+ readline5 (5.2+dfsg-3) unstable; urgency=medium
+ .
+   * QA upload.
+   * Enable hardening build flags.
+   * Remove unused multilib packages.
+   * Use architecture qualified compiler. Closes: #784669.
+   * Refer to GPL-2 instead of GPL{-3,} in copyright as the sole purpose of
+     this package is being licensed under GPL-2.
+   * Declare source format 1.0.
+   * Remove install-info from obsolete maintscripts and install-info
+     dependency to comply with Debian policy 12.2.
+   * Verified compliance with Debian policy 3.9.6.
+Checksums-Sha1:
+ a41f1ee2fe975a9dcfcd6d243f35253eae200bf5 1218716 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
+ d79f5a54f3a57d15401c2de443deaa486c367397 16960 libreadline5-dbg_5.2+dfsg-3_amd64.deb
+ 9cde6ffd596a9c4d95a376ae0ac74c4dd4b8558a 7980 libreadline5-dbgsym_5.2+dfsg-3_amd64.deb
+ 6083c1a9fd61700cd28b4b93c0a5a9183ea71f34 35220 libreadline5_5.2+dfsg-3_amd64.deb
+ a37b0ced4af58a790be1e4e1d9d31ee992bc127c 7141 readline5_5.2+dfsg-3_amd64.buildinfo
+Checksums-Sha256:
+ 66567c8871b57fe71faad72d5b8a2a68764df3f43b8671d76e1fefeebb362d33 1218716 libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
+ b9d3d7ec3073c5e1ec6a115c5d27175ddea45ba4fd842a6dc3da6442b37ce57b 16960 libreadline5-dbg_5.2+dfsg-3_amd64.deb
+ 7d20f0404ca72a08b753c43826682f6dd147710da2ad22a920594678810fdfcb 7980 libreadline5-dbgsym_5.2+dfsg-3_amd64.deb
+ 4b38767d0729170b955ff91d3e05d35fded86ffe8cb1aaa893939371239a00f2 35220 libreadline5_5.2+dfsg-3_amd64.deb
+ b19a2d9ca7348ad3dad429e81f0e3bc07ca0ab4b3f69689065d8225586cd0090 7141 readline5_5.2+dfsg-3_amd64.buildinfo
+Files:
+ d249598587105439bea6e54ef90995de 1218716 libdevel extra libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb
+ 288434c73071276ffc7ca6702e87b49a 16960 debug extra libreadline5-dbg_5.2+dfsg-3_amd64.deb
+ 60ddd33f93047f563752dd907733e7f4 7980 debug optional libreadline5-dbgsym_5.2+dfsg-3_amd64.deb
+ 0dba37eb505127c0f8e01aac148a4b99 35220 libs extra libreadline5_5.2+dfsg-3_amd64.deb
+ 1b6cad1a3ff9b8a615ed384ccfe3dcbb 7141 libs extra readline5_5.2+dfsg-3_amd64.buildinfo

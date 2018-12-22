@@ -1,0 +1,5 @@
+libreadline-gplv2-dev_5.2+dfsg-3_amd64.deb libdevel extra
+libreadline5-dbg_5.2+dfsg-3_amd64.deb debug extra
+libreadline5-dbgsym_5.2+dfsg-3_amd64.deb debug optional automatic=yes
+libreadline5_5.2+dfsg-3_amd64.deb libs extra
+readline5_5.2+dfsg-3_amd64.buildinfo libs extra
